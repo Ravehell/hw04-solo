@@ -73,13 +73,27 @@ button {
   display: flex;
   gap: 40px;
 }
-.nav-link {
+.nav-list-link::after {
+  content: '';
+  position: absolute;
+  top: 43px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+.nav-list-link {
+  position: relative;
+  display: block;
   font-weight: 500;
   color: #2e2f42;
-  text-transform: none;
 }
-.nav-link:hover,
-.nav-link:focus {
+.nav-list-link.current::after {
+  background-color: #404bbf;
+}
+.nav-list-link:hover,
+.nav-list-link:focus {
   color: #4d5ae5;
 }
 .ul-address {
@@ -235,7 +249,37 @@ button {
   text-align: center;
   color: #2e2f42;
 }
-.portfolio-list {
+.portfolio-img {
+}
+.portfolio-overlay {
+  position: relative;
+}
+.overlay-text {
+  padding: 40px;
+  color: #f4f4fd;
+}
+.portfolio-overlay {
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+.li-item:hover .overlay {
+  transform: translateY(0);
+}
+.li-item {
+}
+.ortfolio-list {
   font-weight: 500;
   font-style: 20px;
   line-height: 1.2;

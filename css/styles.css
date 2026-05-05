@@ -340,6 +340,13 @@ button {
   color: #ffffff;
   border: 1px solid transparent;
 }
+.div-options-icon {
+  display: flex;
+  width: 264px;
+  height: 112px;
+  justify-content: center;
+  align-items: center;
+}
 .options-item {
 }
 .options-icon {
